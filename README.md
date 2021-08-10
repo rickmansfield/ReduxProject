@@ -18,6 +18,7 @@ This module explored the redux philosophy, creation of the redux store and using
   - [Questions](#questions)
     - [What is Redux](#what-is-redux)
     - [Why  Reedux?](#why--reedux)
+  - [Resources](#resources)
 
 ## Objectives
 - Understand the use and setup of Redux
@@ -127,3 +128,6 @@ In this project, you take a fairly complex application used to search a movie da
   - Beats prop drilling hands down!!!
   - State connected only where needed. 
   - Makes state management MORE predictable. 
+
+## Resources
+![Redux Chart](src\assets\ReduxChart.JPG)
