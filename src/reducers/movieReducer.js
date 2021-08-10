@@ -5,8 +5,8 @@ const initialState = {
     movies: movies,
     appTitle: "IMDB Movie Database"
 }
-
-const reducer = (state, action) => {
+//2 In movieReducer.js, make sure that we are setting our state by default to initialState.** Otherwise your state will not have the original structure it needs to function!
+const reducer = (state = initialState, action) => {
     switch(action.type) {
         case DELETE_MOVIE:
             return {

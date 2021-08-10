@@ -46,5 +46,11 @@ const Movie = (props) => {
         </div>
     </div>);
 }
-
+const mapStateToProps = (state) => {
+    console.log("STATE from MovieList.js", state);
+    return{ 
+        movies: state.movieReducer.movies,//Be sure to make any changes necessary to get the component connected to the movie reducer working again. 
+        displayFavorites: state.favoritesReducer.displayFavorites
+    }
+}
 export default Movie;
