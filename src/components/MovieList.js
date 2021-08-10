@@ -2,9 +2,10 @@ import React from 'react';
 import MovieListItem from './MovieListItem';
 import MovieFooter from './MovieFooter';
 import { connect } from 'react-redux'; //ADDED for mapStateToProps below
+import { deleteMovie } from '../actions/movieActions'; //7 (more below) Import deleteMovie as part of the connect method 
 
 const MovieList = (props)=> {
-    console.log('props from MovieList.js', props);
+    console.log('props from MovieList.js', props);//checks what props are coming in
     // const movies = [];//3B
     const movies = props.movies;//see 3B (3A is below)
 
@@ -39,4 +40,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(MovieList);
+export default connect(mapStateToProps, {deleteMovie})(MovieList);
+//7 [ ] **We can delete movies within the Movie Component.** Connect the deleteMovie action through the connect method. Note I imported { delete movie above }

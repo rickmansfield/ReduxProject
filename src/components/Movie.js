@@ -9,7 +9,7 @@ const Movie = (props) => {
     const { push } = useHistory();
 
     // 4 const movies = [];
-    const movies = props.movies; //changed to get correct date rather than an empty array. 
+    const movies = props.movies; //changed to get correct data rather than an empty array. 
 
     const movie = movies.find(movie=>movie.id===Number(id));
     const displayFavorites = props.displayFavorites //define display favorites
@@ -56,9 +56,9 @@ const Movie = (props) => {
 const mapStateToProps = (state) => {
     console.log("STATE from MovieList.js", state);
     return{ 
-        movies: state.movieReducer.movies,//4 note - Be sure to make any changes necessary to get the component connected to the movie reducer working again. like importing (caution added moveiReducer until needed use state.movies until necessary in the project)
-        displayFavorites: state.favoritesReducer.displayFavorites
-        //Connect the displayFavorites state to the Movie and MovieHeader component.
+        movies: state.movies,//4 note - Be sure to make any changes necessary to get the component connected to the movie reducer working again. like importing (caution added moveiReducer until needed use state.movies until necessary in the project)  and import { connect } to be used below
+        displayFavorites: state.displayFavorites
+        //Connect the displayFavorites state to the Movie and MovieHeader component. don't use favoritesReducer yet. 
     }
 }
-export default Movie;
+export default connect(mapStateToProps)(Movie);
