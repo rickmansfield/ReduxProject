@@ -67,13 +67,13 @@ In this project, you take a fairly complex application used to search a movie da
 
 * 7 [ x ] **We can delete movies within the Movie Component.** Connect the deleteMovie action through the connect method.
 
-* 8A [ ] **Find the HTML element that should trigger a deletion in the movie component.** 
-* 8B [ ] - Create and connect the necessary event handlers to call deleteMovie on the current movie's id. 
-* 8C [] - After setting the state, redirect the user using the push('/movies') command.
+* 8A [ x ] **Find the HTML element that should trigger a deletion in the movie component.** 
+* 8B [ x ] - Create and connect the necessary event handlers to call deleteMovie on the current movie's id. 
+* 8C [x ] - After setting the state, redirect the user using the push('/movies') command.
 
-* [ ] Add in an ADD_MOVIE case to movieReducer.js.
-* [ ] Make this new case return a version of state with new movie values passed in through the payload.
-* [ ] Create an action creator for addMovie in movieActions.js.
+* 9 A [ x ] Add in an ADD_MOVIE case to movieReducer.js.
+* 9 B [ x ] Make this new case return a version of state with new movie values passed in through the payload.
+* 9 C [ ] Create an action creator for addMovie in movieActions.js.
 * [ ] Find the component that triggers the adding of a movie and connect the addMovie action.
 * [ ] Create and connect the necessary event handlers to call addMovie.
 * [ ] Add in push('/movies/) after calling your action to trigger a redirect.
