@@ -73,10 +73,10 @@ In this project, you take a fairly complex application used to search a movie da
 
 * 9 A [ x ] Add in an ADD_MOVIE case to movieReducer.js.
 * 9 B [ x ] Make this new case return a version of state with new movie values passed in through the payload.
-* 9 C [ ] Create an action creator for addMovie in movieActions.js.
-* [ ] Find the component that triggers the adding of a movie and connect the addMovie action.
-* [ ] Create and connect the necessary event handlers to call addMovie.
-* [ ] Add in push('/movies/) after calling your action to trigger a redirect.
+* 9 C [ x ] Create an action creator for addMovie in movieActions.js.
+* 10 A [ ] Find the component that triggers the adding of a movie and connect the addMovie action. (Found using chrome dev tools under components)
+* 10 B [ ] Create and connect the necessary event handlers to call addMovie.
+* 10 C [ ] Add in push('/movies/) after calling your action to trigger a redirect.
 
 #### Build out the favorites reducer
 > *Alright! Now that the movie reducer is complete, you have the chance to build a reducer from scratch to handle favorite movie functionality. We will also work on combining reducers.*
