@@ -19,4 +19,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-//In index.js, make use of the createStore method and Provider component to link your App to redux.
+//1. In index.js, make use of the createStore method and <Provider> component to link your App to redux.

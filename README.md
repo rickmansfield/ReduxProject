@@ -45,19 +45,19 @@ In this project, you take a fairly complex application used to search a movie da
 #### Setup Redux
 > *The DOM and movie reducer has been provided for you, but it's up to to connect it to redux...*
 
-* 1 [ ] In index.js, make use of the createStore method and Provider component to link your App to redux.
+* 1 [ x ] In index.js, make use of the createStore method and Provider component to link your App to redux.
 
 #### Connecting the Movie reducer
 > *Within the reducers folder is the movieReducers file. We have the state already setup it up here with some initial data. Let's connect that state to our component.*
 
 * 2 [ x ] **In movieReducer.js, make sure that we are setting our state by default to initialState.** Otherwise your state will not have the original structure it needs to function!
 
-* 3A [ xx ] **The MovieList component prints all of our movies to the screen.** Use the connect method here to map the movies state value into props.
-* 3B [] Replace our static movie variable with that prop.
+* 3A [ x ] **The MovieList component prints all of our movies to the screen.** Use the connect method here to map the movies state value into props.
+* 3B [ x ] Replace our static movie variable with that prop.
 
-* [ ] **The Movie component needs to access our list of movies to function.** Map movies to props here as well.
+* 4 [ x ] **The Movie component needs to access our list of movies to function.** Map movies to props here as well.
 
-* [ ] **Finally, MovieHeader uses appTitle to display the title text.** Connect this component to appTitle and test appTitle is correctly displayed in your app.
+* 5 [ ] **Finally, MovieHeader uses appTitle to display the title text.** Connect this component to appTitle and test appTitle is correctly displayed in your app.
 
 
 #### Connecting the Delete and Add Movie actions

@@ -1,12 +1,18 @@
 import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const Movie = (props) => {
+    console.log('Movie.js props ', props)
+    ;
     const { id } = useParams();
     const { push } = useHistory();
 
-    const movies = [];
+    // 4 const movies = [];
+    const movies = props.movies; //changed to get correct date rather than an empty array. 
+
     const movie = movies.find(movie=>movie.id===Number(id));
+    const displayFavorites = props.displayFavorites //define display favorites
     
     return(<div className="modal-page col">
         <div className="modal-dialog">
@@ -46,11 +52,13 @@ const Movie = (props) => {
         </div>
     </div>);
 }
+//4 [ ] **The Movie component needs to access our list of movies to function.** Map movies to props here as well.
 const mapStateToProps = (state) => {
     console.log("STATE from MovieList.js", state);
     return{ 
-        movies: state.movieReducer.movies,//Be sure to make any changes necessary to get the component connected to the movie reducer working again. 
+        movies: state.movieReducer.movies,//4 note - Be sure to make any changes necessary to get the component connected to the movie reducer working again. like importing (caution added moveiReducer until needed use state.movies until necessary in the project)
         displayFavorites: state.favoritesReducer.displayFavorites
+        //Connect the displayFavorites state to the Movie and MovieHeader component.
     }
 }
 export default Movie;

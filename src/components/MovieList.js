@@ -35,7 +35,7 @@ const MovieList = (props)=> {
 //3A The MovieList component prints all of our movies to the screen.** Use the connect method here to map the movies state value into props. Replace our static movie variable with that prop above 
 const mapStateToProps = (state) => {
     console.log("STATE from MovieList.js", state);
-    return{ movies: state.movieReducer.movies
+    return{ movies: state.movies//Make changes necessary to get the component connected to the movie reducer working again. Remember .reducer will NOT be in this line of code until later. 
     }
 }
 
