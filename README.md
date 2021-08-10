@@ -15,6 +15,9 @@ This module explored the redux philosophy, creation of the redux store and using
       - [Build out the favorites actions](#build-out-the-favorites-actions)
     - [Stretch goals](#stretch-goals)
   - [Rick Mansfield's Pull Request](#rick-mansfields-pull-request)
+  - [Questions](#questions)
+    - [What is Redux](#what-is-redux)
+    - [Why  Reedux?](#why--reedux)
 
 ## Objectives
 - Understand the use and setup of Redux
@@ -107,3 +110,20 @@ In this project, you take a fairly complex application used to search a movie da
 ## Rick Mansfield's Pull Request
 
 - [Link for Convenience](https://github.com/LambdaSchool/web-module-project-redux/compare/main...rickmansfield:rick-mansfield?expand=1)
+
+## Questions 
+
+### What is Redux
+
+- Redux is a predictable state container for JavaScript apps that replaced Flux.
+- It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
+- You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.
+- The Redux website says `Redux is a pattern and library for managing and updating application state, using events called "actions". It serves as a centralized store for state that needs to be used across your entire application, with rules ensuring that the state can only be updated in a predictable fashion.`
+  
+### Why  Reedux?
+
+  - Redux helps you manage "global" state - state that is needed across many parts of your application.
+  - The patterns and tools provided by Redux make it easier to understand when, where, why, and how the state in your application is being updated, and how your application logic will behave when those changes occur. Redux guides you towards writing code that is predictable and testable, which helps give you confidence that your application will work as expected.
+  - Beats prop drilling hands down!!!
+  - State connected only where needed. 
+  - Makes state management MORE predictable. 
