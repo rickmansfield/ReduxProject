@@ -28,6 +28,9 @@ const mapStateToProps = (state) => {
     return {
         appTitle: state.movieReducer.appTitle,
         //#5 note remember movieReducer will not be used "yet" at this point for appTitle state. Ccorrect this in step 14
+    
+        displayFavorites: state.favoritesReducer.displayFavorites //#16 Connect the displayFavorites state to the Movie and MovieHeader component.
+    
     }
 }
 // export default MovieHeader;
