@@ -70,7 +70,7 @@ const mapStateToProps = (state) => {
     return { 
         movies: state.movieReducer.movies,//4 note - Be sure to make any changes necessary to get the component connected to the movie reducer working again. like importing (caution do not add moveiReducer until needed in step 14. For now use state.movies until necessary in the project)  and import { connect } to be used below
         displayFavorites: state.favoritesReducer.displayFavorites
-        //Connect the displayFavorites state to the Movie and MovieHeader component. don't use favoritesReducer yet. 
+        //Connect the displayFavorites state to the Movie and MovieHeader component. don't use favoritesReducer yet. that's for the steps 14+
     }
 }
 //7 [ x ] **We can delete movies within the Movie Component.** Connect the deleteMovie action through the connect method.
