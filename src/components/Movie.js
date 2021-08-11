@@ -56,7 +56,7 @@ const Movie = (props) => {
                             <span className="delete">
                                 {/* 
                                  8A [ ] **Find the HTML element that should trigger a deletion in the movie component.**  */}
-                                <input type="button" className="m-2 btn btn-danger" value="Delete"/></span>
+                                <input onClick={useDeleteMovie} key={movie}type="button" className="m-2 btn btn-danger" value="Delete"/></span>
                         </section>
                     </div>
                 </div>
@@ -67,10 +67,12 @@ const Movie = (props) => {
 //4 [ ] **The Movie component needs to access our list of movies to function.** Map movies to props here as well.
 const mapStateToProps = (state) => {
     console.log("STATE from MovieList.js", state);
-    return{ 
-        movies: state.movies,//4 note - Be sure to make any changes necessary to get the component connected to the movie reducer working again. like importing (caution added moveiReducer until needed use state.movies until necessary in the project)  and import { connect } to be used below
-        displayFavorites: state.displayFavorites
+    return { 
+        movies: state.movieReducer.movies,//4 note - Be sure to make any changes necessary to get the component connected to the movie reducer working again. like importing (caution do not add moveiReducer until needed in step 14. For now use state.movies until necessary in the project)  and import { connect } to be used below
+        displayFavorites: state.favoritesReducer.displayFavorites
         //Connect the displayFavorites state to the Movie and MovieHeader component. don't use favoritesReducer yet. 
     }
 }
-export default connect(mapStateToProps)(Movie);
+//7 [ x ] **We can delete movies within the Movie Component.** Connect the deleteMovie action through the connect method.
+// export default connect(mapStateToProps)(Movie);
+export default connect(mapStateToProps, {deleteMovie})(Movie);

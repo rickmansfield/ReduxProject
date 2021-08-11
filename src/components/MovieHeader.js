@@ -26,8 +26,8 @@ const MovieHeader = (props) => {
 const mapStateToProps = (state) => {
     console.log('State from MovieHeader.js: ', state);
     return {
-        appTitle: state.appTitle,
-        //#5 note remember movieReducer will not be used "yet" at this point for appTitle state.  
+        appTitle: state.movieReducer.appTitle,
+        //#5 note remember movieReducer will not be used "yet" at this point for appTitle state. Ccorrect this in step 14
     }
 }
 // export default MovieHeader;

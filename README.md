@@ -87,9 +87,9 @@ In this project, you take a fairly complex application used to search a movie da
 
 * 12 A [ ] **Import your new reducer file into the ./reducers/index.js file.** 12 B [ ] As a start, only add a default case to the switch statement. (back in favoritesReducer.js)
 
-* 13 [ ] **In reducers/index.js, use the combineReducers method to connect both movies and favorite movies to redux.**
+* 13 [ x ] **In reducers/index.js, use the combineReducers method to connect both movies and favorite movies to redux.**
 
-* [ ] **Notice that your movie functions no longer work. Why?** Make changes necessary to get the component connected to the movie reducer working again.
+* 14 [ ] **Notice that your movie functions no longer work. Why?** Make changes necessary to get the component connected to the movie reducer working again.(see MovieHeader.js, Movie.js)
 
 * [ ] Connect the favorites state to the FavoriteMovieList component and test.
 
