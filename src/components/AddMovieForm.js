@@ -12,7 +12,7 @@ const AddMovieForm = (props) => {
         director: "",
         genre: "",
         metascore: 0,
-        description:""
+        description: ""
     });
 
     const handleChange = (e) => {
@@ -21,7 +21,7 @@ const AddMovieForm = (props) => {
             [e.target.name]: e.target.value
         });
     }
-//* 10 B [ ] Create and connect the necessary event handlers to call addMovie.
+    //* 10 B [ ] Create and connect the necessary event handlers to call addMovie.
     const handleSubmit = (e) => {
         e.preventDefault()
         props.addMovie({
@@ -33,40 +33,40 @@ const AddMovieForm = (props) => {
     }
 
     const { title, director, genre, metascore, description } = movie;
-    return(<div className="col">
+    return (<div className="col">
         <div className="modal-dialog">
             <div className="modal-content">
                 <form onSubmit={handleSubmit}>
-                    <div className="modal-header">						
+                    <div className="modal-header">
                         <h4 className="modal-title">Add Movie</h4>
                     </div>
 
-                    <div className="modal-body">					
+                    <div className="modal-body">
                         <div className="form-group">
                             <label>Title</label>
-                            <input value={title} onChange={handleChange} name="title" type="text" className="form-control"/>
+                            <input value={title} onChange={handleChange} name="title" type="text" className="form-control" />
                         </div>
                         <div className="form-group">
                             <label>Director</label>
-                            <input value={director} onChange={handleChange} name="director" type="text" className="form-control"/>
+                            <input value={director} onChange={handleChange} name="director" type="text" className="form-control" />
                         </div>
                         <div className="form-group">
                             <label>Genre</label>
-                            <input value={genre} onChange={handleChange} name="genre" type="text" className="form-control"/>
+                            <input value={genre} onChange={handleChange} name="genre" type="text" className="form-control" />
                         </div>
                         <div className="form-group">
                             <label>Metascore</label>
-                            <input value={metascore} onChange={handleChange} name="metascore" type="number" className="form-control"/>
-                        </div>		
+                            <input value={metascore} onChange={handleChange} name="metascore" type="number" className="form-control" />
+                        </div>
                         <div className="form-group">
                             <label>Description</label>
                             <textarea value={description} onChange={handleChange} name="description" className="form-control"></textarea>
                         </div>
-                        			
+
                     </div>
                     <div className="modal-footer">
-                        <input type="submit" className="btn btn-success" value="Add"/>
-                        <Link to={`/movies`}><input type="button" className="btn btn-default" value="Cancel"/></Link>
+                        <input type="submit" className="btn btn-success" value="Add" />
+                        <Link to={`/movies`}><input type="button" className="btn btn-default" value="Cancel" /></Link>
                     </div>
                 </form>
             </div>
@@ -76,4 +76,4 @@ const AddMovieForm = (props) => {
 
 //* 10 A [ ] Find the component that triggers the adding of a movie and connect the addMovie action. (Found using chrome dev tools under components)
 // export default AddMovieForm;
-export default connect(null, {addMovie})(AddMovieForm);
+export default connect(null, { addMovie })(AddMovieForm);
