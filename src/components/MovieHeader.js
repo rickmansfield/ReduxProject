@@ -10,7 +10,8 @@ const MovieHeader = (props) => {
 
     // const displayFavorites = true;
     const displayFavorites = props.displayFavorites; //changed to reflect dynamic changes
-    
+    const toggleFavorites = props.toggleFavorites; //17A see import, export, event handler and onclick associated all in this component. 
+
     //17 C event handler for toggleFavorites see onclick below too
     const useToggleFavorites = () => {
         toggleFavorites()
@@ -41,4 +42,4 @@ const mapStateToProps = (state) => {
     }
 }
 // export default MovieHeader;
-export default connect(mapStateToProps)(MovieHeader); 
+export default connect(mapStateToProps, {toggleFavorites})(MovieHeader); 

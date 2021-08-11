@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 
 const AddMovieForm = (props) => {
+    console.log('AddMovieFormProps: ', props)
     const { push } = useHistory();
 
     const [movie, setMovie] = useState({

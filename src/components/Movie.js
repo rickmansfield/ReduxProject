@@ -19,9 +19,8 @@ const Movie = (props) => {
 
     // 4 const movies = [];
     const movies = props.movies; //changed to get correct data rather than an empty array. 
-
     const movie = movies.find(movie=>movie.id===Number(id));
-    const displayFavorites = props.displayFavorites //define display favorites
+    const displayFavorites = props.displayFavorites; //define display favorites
 
     //18 C event Handler for addFavorites see import above and export below too. !!!
     const useAddFavorite = () => {

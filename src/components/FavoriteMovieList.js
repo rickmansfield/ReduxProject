@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; //15 see below
 import { removeFavorite } from '../actions/favoritesAction';//19 C Event handler see onClick below

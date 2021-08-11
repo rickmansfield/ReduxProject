@@ -9,7 +9,7 @@ const initialState = {
 
 //* 12 A [ ] **Import your new reducer file into the ./reducers/index.js file.
 //** 12 B [ ] As a start, only add a default case to the switch statement. (back in favoritesReducer.js)
-const reducer = (state = initialState, action) => {
+const favoritesreducer = (state = initialState, action) => {
     switch(action.type){
         //17 A) Add in a case for TOGGLE_FAVORITES
         case TOGGLE_FAVORITES:
@@ -36,4 +36,4 @@ const reducer = (state = initialState, action) => {
     }
     
 }
-export default reducer;
+export default favoritesreducer;

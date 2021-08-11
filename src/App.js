@@ -13,7 +13,8 @@ import FavoriteMovieList from './components/FavoriteMovieList';
 
 const App = props => {
   console.log('App.js props: ', props);
-  const displayFavorites = true;
+  //const displayFavorties = true; 
+  const displayFavorites = props.displayFavorites; // 17 must change state to be dynamic
 
   return (
     <div>
@@ -49,4 +50,11 @@ const App = props => {
   );
 };
 
-export default App;
+// export default App;
+const mapStateToProps = (state) => {
+  console.log('App.js state: ', state)
+  return {
+    displayFavorites: state.favoritesReducer.displayFavorites
+  }
+}
+export default connect(mapStateToProps)(App);
