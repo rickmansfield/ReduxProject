@@ -1,21 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { toggleFavorites } from '../actions/favoritesAction';//18C see below
 
 const MovieHeader = (props) => {
     console.log('MovieHeader props', props);//To verify what's here. 
     // const appTitle = "";
     const appTitle = props.appTitle;//changed to reflect dynamic title via props.
 
-    const displayFavorites = true;
+    // const displayFavorites = true;
+    const displayFavorites = props.displayFavorites; //changed to reflect dynamic changes
     
+    //17 C event handler for toggleFavorites see onclick below too
+    const useToggleFavorites = () => {
+        toggleFavorites()
+    }
+
     return(<div className="table-title">
         <div className="row">
         <div className="col-sm-6">
             <h2>{appTitle}</h2>
         </div>
         <div className="col-sm-6 headerBar">
-            <div className="btn btn-sm btn-primary"><span>{ displayFavorites ? "Hide" : "Show"} Favorites</span></div>
+            <div onClick={useToggleFavorites} className="btn btn-sm btn-primary"><span>{ displayFavorites ? "Hide" : "Show"} Favorites</span></div>
             <Link to="/movies" className="btn btn-sm btn-primary">View All Movies</Link>
             <Link to="/movies/add" className="btn btn-sm btn-success"><i className="material-icons">&#xE147;</i> <span>Add New Movie</span></Link>
         </div>

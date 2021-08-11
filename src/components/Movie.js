@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { deleteMovie } from '../actions/movieActions';// 8A, 8B, see below
+import { addFavorite } from '../actions/favoritesAction'; //18 C see event handler and export below
 
 const Movie = (props) => {
     console.log('Movie.js props ', props)
@@ -21,6 +22,14 @@ const Movie = (props) => {
 
     const movie = movies.find(movie=>movie.id===Number(id));
     const displayFavorites = props.displayFavorites //define display favorites
+
+    //18 C event Handler for addFavorites see import above and export below too. !!!
+    const useAddFavorite = () => {
+        props.addFavorite({
+            title: movie.title,
+            id: movie.id
+        })
+    }
 
 
     return(<div className="modal-page col">
@@ -52,7 +61,8 @@ const Movie = (props) => {
                         </section>
                         
                         <section>
-                            <span className="m-2 btn btn-dark">Favorite</span>
+                            {/* Stretch goals 1 - It makes sense to not allow the user to favorite an item if favorites is not displayed. Add in means for the favorite button to ONLY display if displayFavorite is true.*/}
+                        {displayFavorites && <span onClick={useAddFavorite} key={movie.id} className="m-2 btn btn-dark">Favorite</span>}
                             <span className="delete">
                                 {/* 
                                  8A [ ] **Find the HTML element that should trigger a deletion in the movie component.**  */}
@@ -75,4 +85,4 @@ const mapStateToProps = (state) => {
 }
 //7 [ x ] **We can delete movies within the Movie Component.** Connect the deleteMovie action through the connect method.
 // export default connect(mapStateToProps)(Movie);
-export default connect(mapStateToProps, {deleteMovie})(Movie);
+export default connect(mapStateToProps, {deleteMovie, addFavorite})(Movie);

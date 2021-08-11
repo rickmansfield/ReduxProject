@@ -1,3 +1,4 @@
+import { TOGGLE_FAVORITES, ADD_FAVORITE, REMOVE_FAVORITE } from '../actions/favoritesAction'
 //* 11 [ x ] Create a reducer file for handling business logic for favorites. Include the following state values in your initialState setup:
 //-  favorites: an array of movie objects
 //-  displayFavorites: a boolean that holds if favorite elements should be displayed in app
