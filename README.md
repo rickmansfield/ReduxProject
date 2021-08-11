@@ -91,7 +91,7 @@ In this project, you take a fairly complex application used to search a movie da
 
 * 14 [ x ] **Notice that your movie functions no longer work. Why?** Make changes necessary to get the component connected to the movie reducer working again.(see MovieHeader.js, Movie.js)
 
-* [ ] Connect the favorites state to the FavoriteMovieList component and test.
+* 15 [ ] Connect the favorites state to the FavoriteMovieList component and test.
 
 * [ ] Connect the displayFavorites state to the Movie and MovieHeader component.
 

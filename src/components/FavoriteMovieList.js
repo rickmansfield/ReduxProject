@@ -1,11 +1,13 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-
+import { connect } from 'react-redux'; //15 see below
 
 const FavoriteMovieList = (props) => {
-    const favorites = [];
-    
+    console.log('FavoriteMovieList props: ', props) 
+    // const favorites = []; // replace this
+    const favorites = props.favorites; 
+
     return (<div className="col-xs savedContainer">
         <h5>Favorite Movies</h5>
         {
@@ -21,5 +23,13 @@ const FavoriteMovieList = (props) => {
     </div>);
 }
 
+//* 15 [ ] Connect the favorites state to the FavoriteMovieList component and test.
+// 
+const mapStateToProps = (state) => {
+    console.log('FavoriteMoviesList state: ', state)
+    return {
+        favorites: state.favoritesReducer.favorites
+    }
+}
 
-export default FavoriteMovieList;
+export default connect(mapStateToProps)(FavoriteMovieList); //Connect the action
