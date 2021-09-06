@@ -138,3 +138,5 @@ In this project, you take a fairly complex application used to search a movie da
 
 ## Resources
 ![Redux Chart](src\assets\ReduxChart.JPG)
+
+Test contribution in Github
