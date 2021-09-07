@@ -7,6 +7,8 @@ const initialState = {
 }
 //2 In movieReducer.js, make sure that we are setting our state by default to initialState.** Otherwise your state will not have the original structure it needs to function!
 const reducer = (state = initialState, action) => {
+    console.log('dragonReducer.js ln:10 action:', action);
+    console.log('dragonReducer.js ln:11 state:', state);
     switch (action.type) {
         case DELETE_MOVIE:
             return {
