@@ -6,8 +6,8 @@ import { deleteMovie } from '../actions/movieActions'; //7 (more below) Import d
 
 const MovieList = (props)=> {
     console.log('props from MovieList.js', props);//checks what props are coming in
-    // const movies = [];//3B
-    const movies = props.movies;//see 3B (3A is below)
+    // const movies = [];//3-B
+    const movies = props.movies;//see 3-B (3-A is below)
 
     return (
         <div className="col">
@@ -36,8 +36,8 @@ const MovieList = (props)=> {
 }
 //3A The MovieList component prints all of our movies to the screen.** Use the connect method here to map the movies state value into props. Replace our static movie variable with that prop above 
 const mapStateToProps = (state) => {
-    console.log("STATE from MovieList.js", state);
-    return{ movies: state.movieReducer.movies//Make changes necessary to get the component connected to the movie reducer working again in step 14. Remember .movieReducer will NOT be in this line of code until later in step 14
+    // console.log("STATE from MovieList.js", state);
+    return{ movies: state.movieReducer.movies//Make changes necessary to get the component connected to the movie reducer working again in step 14. Remember .movieReducer will NOT be in this line of code until later in step 14. it starts as just movies: state.movies for step #2
     }
 }
 
