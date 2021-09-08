@@ -25,7 +25,7 @@ const FavoriteMovieList = (props) => {
     </div>);
 }
 
-//* 15 [ ] Connect the favorites state to the FavoriteMovieList component and test.
+//* 15 [ ] Connect the favorites state to the FavoriteMovieList component and test. The test is just the console.log I Think. The state is an empty array becuase up till now we have not added fucntionality to add a favorite to the favorites list
 // 
 const mapStateToProps = (state) => {
     console.log('FavoriteMoviesList state: ', state)
