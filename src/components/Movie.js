@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { Link, useParams, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { deleteMovie } from '../actions/movieActions';// 8A, 8B, see below
 import { addFavorite } from '../actions/favoritesAction'; //18 C see event handler and export below
@@ -66,6 +66,7 @@ const Movie = (props) => {
                                 {/* 
                                  8A [ ] **Find the HTML element that should trigger a deletion in the movie component.**  */}
                                 <input onClick={useDeleteMovie} key={movie} type="button" className="m-2 btn btn-danger" value="Delete" /></span>
+                                <Link to={`/movies/edit/${movie.id}`} className="m-2 btn btn-success">Edit</Link>
                         </section>
                     </div>
                 </div>
