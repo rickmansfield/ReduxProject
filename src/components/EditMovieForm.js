@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import axios from 'axios';
+
 
 const EditMovieForm = (props) => {
+	console.log('EditMovieForm.js ln:8 props', props);
 	const { push } = useHistory();
+	const { id } = useParams();
 
 	const [movie, setMovie] = useState({
 		title:"",
